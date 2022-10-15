@@ -1,10 +1,10 @@
 .\temp\ec_core_key.o: ..\ec_core\ec_core_key.c
 .\temp\ec_core_key.o: ..\ec_core\ec_core_key.h
 .\temp\ec_core_key.o: ..\ec_core\ec_core.h
-.\temp\ec_core_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\temp\ec_core_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\temp\ec_core_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\temp\ec_core_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\temp\ec_core_key.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\temp\ec_core_key.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\string.h
+.\temp\ec_core_key.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\temp\ec_core_key.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\temp\ec_core_key.o: ..\ec_core\ec_core_clk.h
 .\temp\ec_core_key.o: ..\ec_core\ec_core_delay.h
 .\temp\ec_core_key.o: ..\ec_core\ec_core_gpio.h

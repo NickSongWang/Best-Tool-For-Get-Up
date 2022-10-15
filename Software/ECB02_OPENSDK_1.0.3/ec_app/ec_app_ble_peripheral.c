@@ -10,9 +10,11 @@
 
 #include "ec_core.h"
 #include "ec_app_flash.h"
+#include "main.h"
 
 // 1:允许通过蓝牙无线升级程序，0：禁止无线升级程序，需要重新上电，拉高BOOT引脚才能进入下载模式。
 uint8_t ec_app_ble_peripheral_ota_en = 1;
+
 
 void ec_app_ble_peripheral_set_ota_en(uint8_t p) //开启或关闭OTA 默认开启
 {
@@ -40,15 +42,21 @@ static void ec_app_ble_peripheral_notify_disable_event(void) //蓝牙订阅关�
 }
 static void ec_app_ble_peripheral_receive_event(uint8_t *data, uint8_t len) //蓝牙数据接收回调
 {
-    ec_core_uart0_printf("ble peripheral receive len=%d\r\n", len);
-    ec_core_uart_send(EC_CORE_UART1, data, len); //蓝牙数据转发到串口
-    // ec_core_uart0_printf("\r\n");
-    // if (data[0] == '@')
-    //     ec_app_ble_peripheral_set_ota_en(1); //开启OTA
-    // if (data[0] == '#')
-    //     ec_app_ble_peripheral_set_ota_en(0); //关闭OTA
+	motorA_init();
+  ec_core_uart_send(EC_CORE_UART0, data, len); //蓝牙数据转发到串口
+	//以下为通过蓝牙接收的数据来控制电机A转速 
+	if (data[0]=='0')
+		motorA_cw(100);
+	if (data[0]=='1')
+		motorA_cw(300);
+	if (data[0]=='2')
+		motorA_cw(500);
+	if (data[0]=='3')
+		motorA_cw(700);
+	if (data[0]=='4')
+		motorA_cw(900);
 
-    ec_core_sw_watchdog_feed(); //软件看门狗喂狗
+  ec_core_sw_watchdog_feed(); //软件看门狗喂狗
 }
 void ec_app_ble_peripheral_register_event(void) //注册蓝牙事件回调
 {

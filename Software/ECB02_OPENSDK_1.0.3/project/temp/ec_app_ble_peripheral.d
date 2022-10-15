@@ -1,9 +1,9 @@
 .\temp\ec_app_ble_peripheral.o: ..\ec_app\ec_app_ble_peripheral.c
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core.h
-.\temp\ec_app_ble_peripheral.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\temp\ec_app_ble_peripheral.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\temp\ec_app_ble_peripheral.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\temp\ec_app_ble_peripheral.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\temp\ec_app_ble_peripheral.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\temp\ec_app_ble_peripheral.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\string.h
+.\temp\ec_app_ble_peripheral.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\temp\ec_app_ble_peripheral.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_clk.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_delay.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_gpio.h
@@ -24,3 +24,4 @@
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_ble_central.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_ble.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_app\ec_app_flash.h
+.\temp\ec_app_ble_peripheral.o: ..\ec_app\main.h

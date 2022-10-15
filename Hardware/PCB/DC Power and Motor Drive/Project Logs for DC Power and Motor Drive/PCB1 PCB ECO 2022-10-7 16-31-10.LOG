@@ -1,0 +1,113 @@
+Add Component: Footprint Not Found CAP-TH_BD5.0-P2.00-D0.8-FD
+Add Component: Footprint Not Found CAP-TH_BD5.0-P2.00-D0.8-FD
+Add Component: Footprint Not Found CAP-TH_BD5.0-P2.00-D0.8-FD
+Add Component: Footprint Not Found SMA_L4.3-W2.6-LS5.1-RD
+Add Component: Footprint Not Found SOD-323_L1.8-W1.3-LS2.5-RD
+Add Component: Footprint Not Found LED0805-R-RD
+Add Component: Footprint Not Found IND-SMD_L4.4-W4.2
+Add Component: Footprint Not Found IND-SMD_L6.0-W6.0_SWPA6045S
+Add Component: Footprint Not Found SO-8_L4.9-W3.9-P1.27-LS5.9-BL
+Add Component: Footprint Not Found R1206
+Add Component: Footprint Not Found R1206
+Add Component: Footprint Not Found R1206
+Add Component: Footprint Not Found LED0805-RD_RED
+Add Component: Footprint Not Found TO-263-3L_L10.0-W9.2-P2.54-TL
+Add Component: Footprint Not Found SSOP-24_L8.4-W5.8-P0.65-LS7.8-BL
+Add Component: Footprint Not Found ESOP-8_L4.9-W3.9-P1.27-LS6.0-BL-EP
+Add Component: Footprint Not Found BAT-SMD_MY-18650-02
+Add Component: Footprint Not Found BAT-SMD_MY-18650-02
+Add Component: Footprint Not Found SO-8_L4.9-W3.9-P1.27-LS6.0-BL
+Add Component: Footprint Not Found MICRO-USB-SMD_KH-MICRO-SMT.ZJ-5P
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Add Pin To Net: Unknown Pin: Pin C10-1
+Add Pin To Net: Unknown Pin: Pin C10-2
+Add Pin To Net: Unknown Pin: Pin C11-1
+Add Pin To Net: Unknown Pin: Pin C11-2
+Add Pin To Net: Unknown Pin: Pin D1-1
+Add Pin To Net: Unknown Pin: Pin D1-2
+Add Pin To Net: Unknown Pin: Pin D2-1
+Add Pin To Net: Unknown Pin: Pin D2-2
+Add Pin To Net: Unknown Pin: Pin GREEN_LED-1
+Add Pin To Net: Unknown Pin: Pin GREEN_LED-2
+Add Pin To Net: Unknown Pin: Pin L1-1
+Add Pin To Net: Unknown Pin: Pin L1-2
+Add Pin To Net: Unknown Pin: Pin L2-1
+Add Pin To Net: Unknown Pin: Pin L2-2
+Add Pin To Net: Unknown Pin: Pin Q1-3
+Add Pin To Net: Unknown Pin: Pin Q1-4
+Add Pin To Net: Unknown Pin: Pin Q1-5
+Add Pin To Net: Unknown Pin: Pin R1-1
+Add Pin To Net: Unknown Pin: Pin R1-2
+Add Pin To Net: Unknown Pin: Pin R2-1
+Add Pin To Net: Unknown Pin: Pin R2-2
+Add Pin To Net: Unknown Pin: Pin R3-1
+Add Pin To Net: Unknown Pin: Pin R3-2
+Add Pin To Net: Unknown Pin: Pin RED_LED-1
+Add Pin To Net: Unknown Pin: Pin RED_LED-2
+Add Pin To Net: Unknown Pin: Pin U1-1
+Add Pin To Net: Unknown Pin: Pin U1-2
+Add Pin To Net: Unknown Pin: Pin U1-3
+Add Pin To Net: Unknown Pin: Pin U1-4
+Add Pin To Net: Unknown Pin: Pin U3-1
+Add Pin To Net: Unknown Pin: Pin U3-3
+Add Pin To Net: Unknown Pin: Pin U3-4
+Add Pin To Net: Unknown Pin: Pin U3-5
+Add Pin To Net: Unknown Pin: Pin U3-8
+Add Pin To Net: Unknown Pin: Pin U3-9
+Add Pin To Net: Unknown Pin: Pin U3-10
+Add Pin To Net: Unknown Pin: Pin U3-11
+Add Pin To Net: Unknown Pin: Pin U3-13
+Add Pin To Net: Unknown Pin: Pin U3-14
+Add Pin To Net: Unknown Pin: Pin U3-15
+Add Pin To Net: Unknown Pin: Pin U3-16
+Add Pin To Net: Unknown Pin: Pin U3-17
+Add Pin To Net: Unknown Pin: Pin U3-18
+Add Pin To Net: Unknown Pin: Pin U3-19
+Add Pin To Net: Unknown Pin: Pin U3-20
+Add Pin To Net: Unknown Pin: Pin U3-21
+Add Pin To Net: Unknown Pin: Pin U3-22
+Add Pin To Net: Unknown Pin: Pin U3-23
+Add Pin To Net: Unknown Pin: Pin U3-24
+Add Pin To Net: Unknown Pin: Pin U4-1
+Add Pin To Net: Unknown Pin: Pin U4-2
+Add Pin To Net: Unknown Pin: Pin U4-3
+Add Pin To Net: Unknown Pin: Pin U4-4
+Add Pin To Net: Unknown Pin: Pin U4-5
+Add Pin To Net: Unknown Pin: Pin U4-6
+Add Pin To Net: Unknown Pin: Pin U4-7
+Add Pin To Net: Unknown Pin: Pin U4-8
+Add Pin To Net: Unknown Pin: Pin U4-9
+Add Pin To Net: Unknown Pin: Pin U5-1
+Add Pin To Net: Unknown Pin: Pin U6-2
+Add Pin To Net: Unknown Pin: Pin U7-1
+Add Pin To Net: Unknown Pin: Pin U7-2
+Add Pin To Net: Unknown Pin: Pin U7-3
+Add Pin To Net: Unknown Pin: Pin U7-4
+Add Pin To Net: Unknown Pin: Pin U7-5
+Add Pin To Net: Unknown Pin: Pin U7-6
+Add Pin To Net: Unknown Pin: Pin U7-7
+Add Pin To Net: Unknown Pin: Pin U7-8
+Add Pin To Net: Unknown Pin: Pin USB1-1
+Add Pin To Net: Unknown Pin: Pin USB1-5
+Add Class Member: Failed to add class member : Component C6
+Add Class Member: Failed to add class member : Component C10
+Add Class Member: Failed to add class member : Component C11
+Add Class Member: Failed to add class member : Component D1
+Add Class Member: Failed to add class member : Component D2
+Add Class Member: Failed to add class member : Component GREEN_LED
+Add Class Member: Failed to add class member : Component L1
+Add Class Member: Failed to add class member : Component L2
+Add Class Member: Failed to add class member : Component Q1
+Add Class Member: Failed to add class member : Component R1
+Add Class Member: Failed to add class member : Component R2
+Add Class Member: Failed to add class member : Component R3
+Add Class Member: Failed to add class member : Component RED_LED
+Add Class Member: Failed to add class member : Component U1
+Add Class Member: Failed to add class member : Component U3
+Add Class Member: Failed to add class member : Component U4
+Add Class Member: Failed to add class member : Component U5 电池正极
+Add Class Member: Failed to add class member : Component U6 电池负极
+Add Class Member: Failed to add class member : Component U7
+Add Class Member: Failed to add class member : Component USB1
+Added Room: Name=sheet

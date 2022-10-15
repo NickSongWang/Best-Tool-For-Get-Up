@@ -1,9 +1,9 @@
 .\temp\ec_app_flash.o: ..\ec_app\ec_app_flash.c
 .\temp\ec_app_flash.o: ..\ec_core\ec_core.h
-.\temp\ec_app_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\temp\ec_app_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\temp\ec_app_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\temp\ec_app_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\temp\ec_app_flash.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\temp\ec_app_flash.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\string.h
+.\temp\ec_app_flash.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\temp\ec_app_flash.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\temp\ec_app_flash.o: ..\ec_core\ec_core_clk.h
 .\temp\ec_app_flash.o: ..\ec_core\ec_core_delay.h
 .\temp\ec_app_flash.o: ..\ec_core\ec_core_gpio.h

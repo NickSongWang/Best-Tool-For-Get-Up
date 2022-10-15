@@ -8,8 +8,11 @@
  * @version     1.0
  ******************************************************************************/
 
+
 #ifndef __MAIN_H__
 #define __MAIN_H__
+
+#include "stdint.h"
 
 //通过宏定义，选择需要参与编译的代码
 
@@ -52,5 +55,20 @@
 
 #define _EC_APP_SCT_TEST // sct文件修改示例，合理使用flash空间
 #define _EC_APP_RAM_TEST // RAM测试
+
+
+
+extern void motorA_init(void);
+extern void motorA_stop(void);//电机A停转
+extern void motorA_cw(uint16_t cmp);//电机A正转，输入为占空比大小
+extern void motorA_break(void);
+extern void motorA_ccw(uint16_t cmp);//电机A反转，输入为占空比大小
+extern void motorB_init(void);
+extern void motorB_stop(void);//电机B停转
+extern void motorB_cw(uint16_t cmp);//电机B正转，输入为占空比大小
+extern void motorB_break(void);
+extern void motorB_ccw(uint16_t cmp);//电机B反转，输入为占空比大小
+extern void motorB_change(void);
+
 
 #endif

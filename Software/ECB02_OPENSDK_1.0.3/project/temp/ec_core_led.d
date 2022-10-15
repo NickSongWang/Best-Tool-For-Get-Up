@@ -1,10 +1,10 @@
 .\temp\ec_core_led.o: ..\ec_core\ec_core_led.c
 .\temp\ec_core_led.o: ..\ec_core\ec_core_led.h
 .\temp\ec_core_led.o: ..\ec_core\ec_core.h
-.\temp\ec_core_led.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\temp\ec_core_led.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-.\temp\ec_core_led.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\temp\ec_core_led.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\temp\ec_core_led.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\temp\ec_core_led.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\string.h
+.\temp\ec_core_led.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\temp\ec_core_led.o: D:\Software\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\temp\ec_core_led.o: ..\ec_core\ec_core_clk.h
 .\temp\ec_core_led.o: ..\ec_core\ec_core_delay.h
 .\temp\ec_core_led.o: ..\ec_core\ec_core_gpio.h
