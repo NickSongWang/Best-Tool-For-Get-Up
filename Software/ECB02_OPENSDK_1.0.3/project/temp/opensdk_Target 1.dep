@@ -1,6 +1,6 @@
 Dependencies for Project 'opensdk', Target 'Target 1': (DO NOT MODIFY !)
-F (..\ec_app\main.c)(0x634A8BEC)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\main.o --omf_browse .\temp\main.crf --depend .\temp\main.d)
-I (..\ec_app\main.h)(0x634A8270)
+F (..\ec_app\main.c)(0x634AC4D9)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\main.o --omf_browse .\temp\main.crf --depend .\temp\main.d)
+I (..\ec_app\main.h)(0x634AB3CC)
 I (D:\Software\keil\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (..\ec_core\ec_core.h)(0x62DFC399)
 I (D:\Software\keil\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -27,7 +27,7 @@ I (..\ec_core\ec_core_ble.h)(0x6238A147)
 I (..\ec_app\ec_app_flash.h)(0x625023DE)
 I (..\ec_app\ec_app_ble_peripheral.h)(0x6238A2C4)
 I (..\ec_app\ec_app_ble.h)(0x6238A2F2)
-F (..\ec_app\main.h)(0x634A8270)()
+F (..\ec_app\main.h)(0x634AB3CC)()
 F (..\ec_app\ec_app_ble.c)(0x634A7D14)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\ec_app_ble.o --omf_browse .\temp\ec_app_ble.crf --depend .\temp\ec_app_ble.d)
 I (..\ec_core\ec_core.h)(0x62DFC399)
 I (D:\Software\keil\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -54,7 +54,7 @@ I (..\ec_core\ec_core_ble_central.h)(0x6238A0D0)
 I (..\ec_core\ec_core_ble.h)(0x6238A147)
 I (..\ec_app\ec_app_ble_peripheral.h)(0x6238A2C4)
 F (..\ec_app\ec_app_ble.h)(0x6238A2F2)()
-F (..\ec_app\ec_app_ble_peripheral.c)(0x634A8A77)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\ec_app_ble_peripheral.o --omf_browse .\temp\ec_app_ble_peripheral.crf --depend .\temp\ec_app_ble_peripheral.d)
+F (..\ec_app\ec_app_ble_peripheral.c)(0x634AE41B)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\ec_app_ble_peripheral.o --omf_browse .\temp\ec_app_ble_peripheral.crf --depend .\temp\ec_app_ble_peripheral.d)
 I (..\ec_core\ec_core.h)(0x62DFC399)
 I (D:\Software\keil\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (D:\Software\keil\ARM\ARMCC\include\string.h)(0x5475F300)
@@ -79,7 +79,7 @@ I (..\ec_core\ec_core_ble_peripheral.h)(0x624FFD04)
 I (..\ec_core\ec_core_ble_central.h)(0x6238A0D0)
 I (..\ec_core\ec_core_ble.h)(0x6238A147)
 I (..\ec_app\ec_app_flash.h)(0x625023DE)
-I (..\ec_app\main.h)(0x634A8270)
+I (..\ec_app\main.h)(0x634AB3CC)
 F (..\ec_app\ec_app_ble_peripheral.h)(0x6238A2C4)()
 F (..\ec_app\ec_app_flash.c)(0x62504B7D)(--c99 -c --cpu Cortex-M0 -D__MICROLIB --li -g -O3 --apcs=interwork --split_sections -I ..\ec_app -I ..\ec_core -I ..\demo-I.\RTE\_Target_1-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-ID:\Software\keil\ARM\PACK\ARM\CMSIS\4.2.0\Device\ARM\ARMCM0\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0-o .\temp\ec_app_flash.o --omf_browse .\temp\ec_app_flash.crf --depend .\temp\ec_app_flash.d)
 I (..\ec_core\ec_core.h)(0x62DFC399)

@@ -56,7 +56,8 @@
 #define _EC_APP_SCT_TEST // sct文件修改示例，合理使用flash空间
 #define _EC_APP_RAM_TEST // RAM测试
 
-
+//归零
+extern void to_begin(void);
 
 extern void motorA_init(void);
 extern void motorA_stop(void);//电机A停转
@@ -70,5 +71,10 @@ extern void motorB_break(void);
 extern void motorB_ccw(uint16_t cmp);//电机B反转，输入为占空比大小
 extern void motorB_change(void);
 
+//闹钟模式
+extern void get_up_now(void);
+
+//锤人模式
+extern void hammer(void);
 
 #endif

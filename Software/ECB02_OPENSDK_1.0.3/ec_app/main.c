@@ -43,6 +43,20 @@ void uart0_init(void)	//串口0初始化 波特率精度受时钟频率影响
                       uart0_rx);
 }
 
+//红外遮挡中断
+void int_rising(void) //上升沿中断
+{
+}
+void int_falling(void) //下降沿中断
+{
+    motorB_change();
+}
+void int_falling2(void) //下降沿中断
+{
+    motorB_break();
+		motorB_stop();
+}
+
 
 //下面为控制电机的程序
 uint16_t cmp[5] = {100,300,500,700,900};
@@ -58,7 +72,6 @@ void motorA_stop(void)//电机A停转
 	ec_core_gpio_write(EC_CORE_GPIO_P1, EC_CORE_GPIO_LEVEL_L);    //设置输出电平
 	ec_core_gpio_write(EC_CORE_GPIO_P2, EC_CORE_GPIO_LEVEL_L);
 	ec_core_gpio_write(EC_CORE_GPIO_P3, EC_CORE_GPIO_LEVEL_L);
-	flag=0;
 }
 void motorA_cw(uint16_t cmp)//电机A正转，输入为占空比大小
 {
@@ -66,14 +79,12 @@ void motorA_cw(uint16_t cmp)//电机A正转，输入为占空比大小
 	ec_core_pwm_start(EC_CORE_PWM_CLK_NO_DIV, EC_CORE_PWM_CH0, EC_CORE_GPIO_P3, cmp, 1000); // 占空比cmp/1000 频率=16Mhz/1000=16KHz
 	ec_core_gpio_write(EC_CORE_GPIO_P1, EC_CORE_GPIO_LEVEL_H);  // GPIO1输出高电平
 	ec_core_gpio_write(EC_CORE_GPIO_P2, EC_CORE_GPIO_LEVEL_L);  // GPIO2输出低电平
-	flag=1;
 }
 void motorA_break(void)
 {
 	ec_core_pwm_stop(EC_CORE_PWM_CH0);
 	ec_core_gpio_write(EC_CORE_GPIO_P1, EC_CORE_GPIO_LEVEL_H);
 	ec_core_gpio_write(EC_CORE_GPIO_P2, EC_CORE_GPIO_LEVEL_H);
-	flag=0;
 }
 void motorA_ccw(uint16_t cmp)//电机A反转，输入为占空比大小
 {
@@ -81,7 +92,6 @@ void motorA_ccw(uint16_t cmp)//电机A反转，输入为占空比大小
 	ec_core_pwm_start(EC_CORE_PWM_CLK_NO_DIV, EC_CORE_PWM_CH0, EC_CORE_GPIO_P3, cmp, 1000); // 占空比cmp/1000 频率=16Mhz/1000=16KHz
 	ec_core_gpio_write(EC_CORE_GPIO_P1, EC_CORE_GPIO_LEVEL_L);  // GPIO1输出低电平
 	ec_core_gpio_write(EC_CORE_GPIO_P2, EC_CORE_GPIO_LEVEL_H);  // GPIO2输出高电平
-	flag=2;
 }
 
 
@@ -121,8 +131,6 @@ void motorB_ccw(uint16_t cmp)//电机B反转，输入为占空比大小
 	ec_core_gpio_write(EC_CORE_GPIO_P7, EC_CORE_GPIO_LEVEL_H);  // GPIO2输出高电平
 	flag=2;
 }
-
-
 void motorB_change(void)
 {
 	if(flag==1)
@@ -133,23 +141,10 @@ void motorB_change(void)
 
 
 
-//红外遮挡中断
-void int_rising(void) //上升沿中断
-{
-}
-void int_falling(void) //下降沿中断
-{
-    motorB_change();
-}
-void int_falling2(void) //下降沿中断
-{
-    motorB_break();
-		motorB_stop();
-}
-
-
+//闹钟模式
 void find_target(void)//寻找我的头,如果GPIO10的输入为高电平，则说明没有头
 {
+	//ec_core_gpio_in_init(EC_CORE_GPIO_P10, EC_CORE_GPIO_PULL_UP_S);
 	if(ec_core_gpio_read(EC_CORE_GPIO_P10)==EC_CORE_GPIO_LEVEL_L)
 		motorB_stop();
 	else if(ec_core_gpio_read(EC_CORE_GPIO_P10)==EC_CORE_GPIO_LEVEL_H)
@@ -158,23 +153,72 @@ void find_target(void)//寻找我的头,如果GPIO10的输入为高电平，则�
 		motorB_ccw(cmp[0]);
 	}
 }
+void sw_timer1_int2(void) //软件定时器1中断
+{
+	ec_core_sw_timer_stop(EC_CORE_SW_TIMER1);
+	motorA_ccw(cmp[4]);
+}
+void sw_timer1_int(void) //软件定时器1中断
+{
+	motorA_ccw(cmp[2]);
+	ec_core_sw_timer_start(EC_CORE_SW_TIMER1, 10000, sw_timer1_int2);
+    // ec_core_uart0_printf("sw_timer1_int\r\n");
+}
+void get_up_now(void)
+{
+	motorA_ccw(cmp[0]);
+	ec_core_sw_timer_start(EC_CORE_SW_TIMER1, 10000, sw_timer1_int); //软件定时器
+	find_target();
+}
 
 
+
+//遥控模式
+
+
+
+
+
+//锤人模式
+void hammer(void)
+{
+	
+	motorA_ccw(cmp[2]);
+	ec_core_gpio_int_register(EC_CORE_GPIO_P9, int_rising, int_falling);
+}
+
+
+
+
+void to_begin(void)//当手机操控切换模式时，把一切归零，防止出现比如定时器还在计时的问题
+{
+	ec_core_sw_timer_stop(EC_CORE_SW_TIMER1);
+	motorA_stop();
+	motorB_stop();
+	ec_core_pwm_stop(EC_CORE_PWM_CH0);
+	ec_core_pwm_stop(EC_CORE_PWM_CH1);
+}
 
 int main(void)
 {
     ec_core_sys_clk_set(EC_CORE_SYS_CLK_48M); //配置系统时钟
-
+	
     ec_app_flash_sys_param_read(); // 从flash读取系统参数
-	ec_app_ble_param_init();       // 初始化蓝牙相关的参数（其中有关于通过蓝牙接收数据来控制电机的代码）
+		ec_app_ble_param_init();       // 初始化蓝牙相关的参数（其中有关于通过蓝牙接收数据来控制电机的代码）
     ec_core_init(); //蓝牙内核初始化
     uart0_init();
+		ec_core_gpio_in_init(EC_CORE_GPIO_P9, EC_CORE_GPIO_PULL_UP_S);//初始化GPIO9为上拉输入
+		ec_core_gpio_in_init(EC_CORE_GPIO_P10, EC_CORE_GPIO_PULL_UP_S);
+		motorA_init();
+		motorB_init();
+	
+	
 
 //    uint8_t ver[3] = {0};
 //    ec_core_ver(ver);                                                       //读取软件版本
 //    ec_core_uart0_printf("ECB02 SDK %d.%d.%d\r\n", ver[0], ver[1], ver[2]); //串口0 printf打印
 	
-		motorB_init();
+
 		
 
 		

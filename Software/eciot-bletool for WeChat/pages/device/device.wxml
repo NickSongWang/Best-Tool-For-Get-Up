@@ -1,0 +1,30 @@
+<!--pages/device.wxml-->
+<view class="device-container">
+  <text class="title-rev">数据接收 : </text>
+  <button class="bt-clear" type="primary" bindtap="btClearTap">清空</button>
+  <checkbox-group bindchange="checkScroll">
+    <checkbox class="checkbox-scroll" checked="true">滚动</checkbox>
+  </checkbox-group>
+  <checkbox-group bindchange="checkRevHex">
+    <checkbox class="checkbox-rev-hex">Hex</checkbox>
+  </checkbox-group>
+  <view class="scroll-view-container">
+    <scroll-view class="scroll-view-rev" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+      <view class="view-rev">
+        <text class="text-rev">{{textRevData}}</text>
+      </view>
+      <view id="scroll-view-bottom"></view>
+    </scroll-view>
+  </view>
+  <text class="title-send">数据发送 : </text>
+  <checkbox-group bindchange="checkSendHex">
+    <checkbox class="checkbox-send-hex">Hex</checkbox>
+  </checkbox-group>
+  <!-- <input class="input-send" bindblur="inputSendData"></input> -->
+  <view class="view-input-send">
+    <textarea class="input-send" maxlength="244" bindblur="inputSendData" bindinput="inputSendData"/>
+  </view>
+  <view class="view-bt-send">
+    <button class="bt-send" type="primary" bindtap="btSendTap">发送</button>
+  </view>
+</view>
