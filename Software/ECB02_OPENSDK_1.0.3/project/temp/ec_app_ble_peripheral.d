@@ -25,3 +25,4 @@
 .\temp\ec_app_ble_peripheral.o: ..\ec_core\ec_core_ble.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_app\ec_app_flash.h
 .\temp\ec_app_ble_peripheral.o: ..\ec_app\main.h
+.\temp\ec_app_ble_peripheral.o: ..\ec_app\ble_getup.h

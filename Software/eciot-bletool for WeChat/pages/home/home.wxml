@@ -1,13 +1,13 @@
 <!--pages/home/home.wxml-->
-<button  bindtap="tiaozhuan">BLE</button>
-<view class="section">
+<button  bindtap="toBLEConnectpage">BLE</button>
+<!-- <view class="section">
   <view>日期选择器</view>
   <picker mode="date" value="{{date}}" start="2022-09-01" end="2030-09-01" bindchange="bindDateChange">
     <view>
       当前选择: {{date}}
     </view>
   </picker>
-</view>
+</view> -->
 <view>
   <view>设定闹钟</view>
   <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
@@ -17,5 +17,10 @@
   </picker>
 </view>
 <view>
-<button bindtap="sendcountDown">确定</button>
+<button bindtap="sendFistTime">确定</button>
 </view>
+<view>
+  <button bindtap="closeAlarm">关闭闹钟</button>
+</view>
+
+

@@ -49,7 +49,7 @@ Page({
         ctx.hideLoading()
         if (res.ok) {
             //ctx.showModal("提示", "连接成功")
-            ctx.gotoDevicePage()
+            wx.navigateBack()
         } else {
             ctx.showModal("提示", "连接失败,errCode=" + res.errCode + ",errMsg=" + res.errMsg)
         }

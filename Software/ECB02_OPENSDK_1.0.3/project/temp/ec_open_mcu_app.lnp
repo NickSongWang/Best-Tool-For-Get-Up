@@ -3,6 +3,7 @@
 ".\temp\ec_app_ble.o"
 ".\temp\ec_app_ble_peripheral.o"
 ".\temp\ec_app_flash.o"
+".\temp\ble_getup.o"
 ".\temp\ec_core_led.o"
 ".\temp\ec_core_key.o"
 ".\temp\ec_core_i2c.o"

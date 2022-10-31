@@ -2,13 +2,36 @@
   "pages": [
     "pages/home/home",
     "pages/device/device",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/remote/remote",
+    "pages/hammer/hammer"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#01a4ef",
-    "navigationBarTitleText": "易加蓝牙助手",
+    "navigationBarBackgroundColor": "#d06571",
+    "navigationBarTitleText": "快起床",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#909196",
+    "selectedColor": "#d06571",
+    "backgroundColor": "#f7f7fa",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "selectedIconPath": "img/闹钟2.png",
+      "iconPath": "img/闹钟1.png",
+      "text": "闹钟"
+    }, {
+      "pagePath": "pages/remote/remote",
+      "selectedIconPath": "img/遥控2.png",
+      "iconPath": "img/遥控1.png",
+      "text": "遥控"
+    },{
+      "pagePath": "pages/hammer/hammer",
+      "selectedIconPath": "img/锤2.png",
+      "iconPath": "img/锤1.png",
+      "text": "喵喵锤"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

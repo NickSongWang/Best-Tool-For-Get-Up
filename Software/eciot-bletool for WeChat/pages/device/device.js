@@ -41,6 +41,8 @@ Page({
     ecBLE.onBLEConnectionStateChange(() => { })
     ecBLE.closeBLEConnection()
   },
+
+  
   showModal(title, content) {
     wx.showModal({
       title: title,

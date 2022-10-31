@@ -421,6 +421,16 @@
               <FileType>5</FileType>
               <FilePath>..\ec_app\ec_app_flash.h</FilePath>
             </File>
+            <File>
+              <FileName>ble_getup.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ec_app\ble_getup.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_getup.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\ec_app\ble_getup.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

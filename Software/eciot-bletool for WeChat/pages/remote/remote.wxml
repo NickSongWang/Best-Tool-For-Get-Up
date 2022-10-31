@@ -1,0 +1,10 @@
+<!--pages/remote/remote.wxml-->
+<view>
+  <slider bindchange="sliderchange" min="10" max="90" step="10" show-value/>
+  <button bindtap="start">捶!</button>
+  <button bindtap="stop">停!</button>
+</view>
+<view>
+  <button longpress="">左</button>
+  <button longpress="">右</button>
+</view>

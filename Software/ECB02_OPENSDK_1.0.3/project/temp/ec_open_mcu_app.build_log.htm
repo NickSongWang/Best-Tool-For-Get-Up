@@ -22,18 +22,31 @@ Dialog DLL:      TARMCM1.DLL V1.9.0.0
  
 <h2>Project:</h2>
 D:\Nick_Programs_for_Video\Best Tool for Get up\Software\ECB02_OPENSDK_1.0.3\project\opensdk.uvprojx
-Project File Date:  10/15/2022
+Project File Date:  10/31/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'D:\Software\keil\ARM\ARMCC\Bin'
 Build target 'Target 1'
 compiling ec_app_ble_peripheral.c...
-..\ec_app\ec_app_ble_peripheral.c(62): warning:  #186-D: pointless comparison of unsigned integer with zero
-      if(isNegative < 0)   //如果是负数，补上负号
-..\ec_app\ec_app_ble_peripheral.c(115): error:  #167: argument of type "uint32_t" is incompatible with parameter of type "const char *"
-  		ec_core_uart0_printf(time);
-..\ec_app\ec_app_ble_peripheral.c: 1 warning, 1 error
-".\temp\ec_open_mcu_app.axf" - 1 Error(s), 1 Warning(s).
+..\ec_app\ble_getup.h(46): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\ec_app\ec_app_ble_peripheral.c(82): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  			ec_core_uart0_printf(data);
+..\ec_app\ec_app_ble_peripheral.c(86): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  			uint16_t len = strlen(data);
+..\ec_app\ec_app_ble_peripheral.c(92): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  			ec_core_uart0_printf(data);
+..\ec_app\ec_app_ble_peripheral.c(95): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  			uint16_t len = strlen(data);
+..\ec_app\ec_app_ble_peripheral.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=79736 RO-data=1932 RW-data=2612 ZI-data=28156  
+FromELF: creating hex file...
+After Build - User command #1: ecBuild.exe
+After Build - User command #2: copy.bat
+D:\Nick_Programs_for_Video\Best Tool for Get up\Software\ECB02_OPENSDK_1.0.3\project>"../tool/adb/adb.exe" push "../bin/ec_open_mcu_app.hex" "/mnt/sdcard/" 
+adb: error: failed to get feature set: no devices/emulators found
+".\temp\ec_open_mcu_app.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,11 +68,10 @@ Package Vendor: ARM
       Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
 
    * Component: ARM::Device:Startup:1.0.1
+      Source file:   Device\ARM\ARMCM0\Source\system_ARMCM0.c
       Include file:  Device\ARM\ARMCM0\Include\ARMCM0.h
       Source file:   Device\ARM\ARMCM0\Source\ARM\startup_ARMCM0.s
-      Source file:   Device\ARM\ARMCM0\Source\system_ARMCM0.c
-Target not created.
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

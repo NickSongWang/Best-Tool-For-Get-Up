@@ -329,12 +329,13 @@ const onBLECharacteristicValueChange = (cb) => {
         let strHex = ""
         let str = ""
         for (let i = 0; i < x.length; i++) {
-            strHex = strHex + x[i].toString(16).padStart(2, "0")
+            //strHex = strHex + x[i].toString(16).padStart(2, "0")
             str = str + String.fromCharCode(x[i])
         }
         // log(strHex)
         // log(str)
-        cb(str, strHex)
+        //cb(str, strHex)
+        cb(str)
     })
 }
 

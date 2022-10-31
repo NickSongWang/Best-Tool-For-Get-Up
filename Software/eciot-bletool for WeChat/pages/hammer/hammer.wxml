@@ -1,0 +1,8 @@
+<!--pages/hammer/hammer.wxml-->
+<view>
+  <text >锤人速度</text>
+  <view>
+    <slider bindchange="slider4change" min="10" max="90" step="10" show-value/>
+  </view>
+  <button bindtap="sendPWM">开始捶背</button>
+</view>
